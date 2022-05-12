@@ -7,7 +7,7 @@ public class Field {
     public Field() {
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
-                fields[i][j] = 'o';
+                fields[i][j] = ' ';
             }
         }
     }
@@ -18,5 +18,13 @@ public class Field {
         System.out.println(fields[1][0] + "" + verLine + "" + fields[1][1] + "" + verLine + "" + fields[1][2]);
         System.out.println(horLine + "" + horLine + "" + horLine + "" + horLine + "" + horLine);
         System.out.println(fields[2][0] + "" + verLine + "" + fields[2][1] + "" + verLine + "" + fields[2][2]);
+    }
+
+    public char[][] getFields() {
+        return fields;
+    }
+
+    public void setFields(char[][] fields) {
+        this.fields = fields;
     }
 }
