@@ -80,12 +80,4 @@ public class Field {
         }
         return false;
     }
-
-    public char[][] getFields() {
-        return fields;
-    }
-
-    public void setFields(char[][] fields) {
-        this.fields = fields;
-    }
 }
