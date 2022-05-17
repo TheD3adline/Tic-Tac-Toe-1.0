@@ -11,7 +11,7 @@ public class Field {
     }
 
     public void print() {
-        System.out.println("  A B C");
+        System.out.println("  1 2 3");
         System.out.println("1 " + fields[0][0] + "|" + fields[0][1] + "|" + fields[0][2]);
         System.out.println("  -----");
         System.out.println("2 " + fields[1][0] + "|" + fields[1][1] + "|" + fields[1][2]);
