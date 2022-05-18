@@ -19,27 +19,28 @@ public class Field {
         System.out.println("3 " + fields[2][0] + "|" + fields[2][1] + "|" + fields[2][2]);
     }
 
-    public boolean move(char player, int x, char y) {
-        if((x == 1) || (x == 2) || (x == 3)) {
+    public boolean move(char player, char x, char y) {
+        int z = Character.getNumericValue(x);
+        if((z == 1) || (z == 2) || (z == 3)) {
             if((y == 'A') || (y == 'a')) {
-                if(this.fields[x - 1][0] == ' ') {
-                    this.fields[x - 1][0] = player;
+                if(this.fields[z - 1][0] == ' ') {
+                    this.fields[z - 1][0] = player;
                     return true;
                 } else {
                     System.out.println("Error: Field already occupied!");
                     return false;
                 }
             } else if((y == 'B') || (y == 'b')) {
-                if(this.fields[x - 1][1] == ' ') {
-                    this.fields[x - 1][1] = player;
+                if(this.fields[z - 1][1] == ' ') {
+                    this.fields[z - 1][1] = player;
                     return true;
                 } else {
                     System.out.println("Error: Field already occupied!");
                     return false;
                 }
             } else if((y == 'C') || (y == 'c')) {
-                if(this.fields[x - 1][2] == ' ') {
-                    this.fields[x - 1][2] = player;
+                if(this.fields[z - 1][2] == ' ') {
+                    this.fields[z - 1][2] = player;
                     return true;
                 } else {
                     System.out.println("Error: Field already occupied!");

@@ -22,14 +22,14 @@ public class Main {
             while(!field.checkWin()) {
                 field.print();
                 System.out.println("Player " + player1 + ", enter row 1 2 3 for your turn and press enter! Then enter column A B C and press enter again!");
-                while(!field.move(player1, sc.nextInt(), sc.next().charAt(0)));
+                while(!field.move(player1, sc.next().charAt(0), sc.next().charAt(0)));
                 if(field.checkWin()) {
                     field.print();
                     System.exit(0);
                 }
                 field.print();
                 System.out.println("Player " + player2 + ", enter row 1 2 3 for your turn and press enter! Then enter column A B C and press enter again!");
-                while(!field.move(player2, sc.nextInt(), sc.next().charAt(0)));
+                while(!field.move(player2, sc.next().charAt(0), sc.next().charAt(0)));
                 if(field.checkWin()) {
                     field.print();
                     System.exit(0);
