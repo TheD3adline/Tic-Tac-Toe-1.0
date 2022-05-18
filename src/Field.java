@@ -19,31 +19,39 @@ public class Field {
         System.out.println("3 " + fields[2][0] + "|" + fields[2][1] + "|" + fields[2][2]);
     }
 
-    public void move(char player, int x, char y) {
+    public boolean move(char player, int x, char y) {
         if((x == 1) || (x == 2) || (x == 3)) {
             if((y == 'A') || (y == 'a')) {
                 if(this.fields[x - 1][0] == ' ') {
                     this.fields[x - 1][0] = player;
+                    return true;
                 } else {
                     System.out.println("Error: Field already occupied!");
+                    return false;
                 }
             } else if((y == 'B') || (y == 'b')) {
                 if(this.fields[x - 1][1] == ' ') {
                     this.fields[x - 1][1] = player;
+                    return true;
                 } else {
                     System.out.println("Error: Field already occupied!");
+                    return false;
                 }
             } else if((y == 'C') || (y == 'c')) {
                 if(this.fields[x - 1][2] == ' ') {
                     this.fields[x - 1][2] = player;
+                    return true;
                 } else {
                     System.out.println("Error: Field already occupied!");
+                    return false;
                 }
             } else {
                 System.out.println("Error: Invalid input!");
+                return false;
             }
         } else {
             System.out.println("Error: Invalid input!");
+            return false;
         }
     }
 
