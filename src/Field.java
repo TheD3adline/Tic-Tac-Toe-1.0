@@ -11,7 +11,7 @@ public class Field {
     }
 
     public void print() {
-        System.out.println("  1 2 3");
+        System.out.println("  A B C");
         System.out.println("1 " + fields[0][0] + "|" + fields[0][1] + "|" + fields[0][2]);
         System.out.println("  -----");
         System.out.println("2 " + fields[1][0] + "|" + fields[1][1] + "|" + fields[1][2]);
@@ -19,11 +19,31 @@ public class Field {
         System.out.println("3 " + fields[2][0] + "|" + fields[2][1] + "|" + fields[2][2]);
     }
 
-    public void move(char player, int y, int x) {
-        if(this.fields[y][x] == ' ') {
-            this.fields[y][x] = player;
+    public void move(char player, int x, char y) {
+        if((x == 1) || (x == 2) || (x == 3)) {
+            if((y == 'A') || (y == 'a')) {
+                if(this.fields[x - 1][0] == ' ') {
+                    this.fields[x - 1][0] = player;
+                } else {
+                    System.out.println("Error: Field already occupied!");
+                }
+            } else if((y == 'B') || (y == 'b')) {
+                if(this.fields[x - 1][1] == ' ') {
+                    this.fields[x - 1][1] = player;
+                } else {
+                    System.out.println("Error: Field already occupied!");
+                }
+            } else if((y == 'C') || (y == 'c')) {
+                if(this.fields[x - 1][2] == ' ') {
+                    this.fields[x - 1][2] = player;
+                } else {
+                    System.out.println("Error: Field already occupied!");
+                }
+            } else {
+                System.out.println("Error: Invalid input!");
+            }
         } else {
-            System.out.println("Error: Field already occupied!");
+            System.out.println("Error: Invalid input!");
         }
     }
 
