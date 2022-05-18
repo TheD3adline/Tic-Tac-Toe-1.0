@@ -81,7 +81,7 @@ public class Field {
         } else if((fields[0][2] == 'x') && (fields[1][1] == 'x') && (fields[2][0] == 'x')) {
             System.out.println("Congratulations Player x, you have won the game!");
             return true;
-        } else if((fields[0][0] == 'o') && (fields[0][1] == 'o') && (fields[0][2] == '0')) {
+        } else if((fields[0][0] == 'o') && (fields[0][1] == 'o') && (fields[0][2] == 'o')) {
             System.out.println("Congratulations Player o, you have won the game!");
             return true;
         } else if((fields[1][0] == 'o') && (fields[1][1] == 'o') && (fields[1][2] == 'o')) {
